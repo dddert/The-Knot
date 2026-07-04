@@ -1,0 +1,853 @@
+{
+  "document_id": "doc_mock_001",
+  "language": "ru",
+  "status": "success",
+  "source": {
+    "id": "source_mock_rd_001",
+    "title": "Анонимизированный R&D корпус: гидрометаллургия и экология",
+    "filename": "mock_rd_corpus.pdf",
+    "source_type": "internal_report",
+    "access_level": "internal",
+    "year": 2024,
+    "country": "RU",
+    "organization": "Demo R&D Lab",
+    "authors": [
+      "Иванов И.И.",
+      "Petrov P."
+    ]
+  },
+  "chunks": [
+    {
+      "id": "chunk_desalination_001",
+      "page": 12,
+      "text": "Для воды обогатительной фабрики с содержанием сульфатов и хлоридов 200-300 мг/л, Ca, Mg, Na 200-300 мг/л и требованием по сухому остатку не более 1000 мг/дм3 применимы обратный осмос, электродиализ и ионный обмен. Обратный осмос требует предварительной фильтрации.",
+      "embedding_text": "water desalination sulfates chlorides calcium magnesium sodium dry residue reverse osmosis electrodialysis ion exchange concentrating plant"
+    },
+    {
+      "id": "chunk_catholyte_001",
+      "page": 8,
+      "text": "В мировой практике электроэкстракции никеля описаны продольная, поперечная и распределительная схема циркуляции католита. Для промышленных ванн скорость потока католита 0.2-0.5 м/с указана как рабочий диапазон, обеспечивающий устойчивое качество катода.",
+      "embedding_text": "nickel electrowinning catholyte circulation longitudinal transverse distributor flow velocity 0.2 0.5 m/s"
+    },
+    {
+      "id": "chunk_matte_slag_001",
+      "page": 21,
+      "text": "Эксперименты 2021-2025 годов по распределению Au, Ag и МПГ между медным и никелевым штейном и шлаком показывают зависимость коэффициента распределения от температуры 1250-1350 °C и состава шлака.",
+      "embedding_text": "gold silver platinum group metals matte slag distribution copper matte nickel matte experiments 2021 2025 temperature 1250 1350"
+    },
+    {
+      "id": "chunk_mine_water_001",
+      "page": 33,
+      "text": "Закачка шахтных вод в глубокие горизонты применяется в России и за рубежом. Для пилотных проектов производительность 100-500 м3/ч, CAPEX 120-350 млн руб., OPEX 25-80 руб./м3. Ограничение: требуется гидрогеологическое обоснование и мониторинг пластового давления.",
+      "embedding_text": "mine water deep injection Russia foreign CAPEX OPEX hydrogeology deep aquifers productivity"
+    },
+    {
+      "id": "chunk_experts_001",
+      "page": 45,
+      "text": "Лаборатория гидрометаллургии обладает экспертизой по электроэкстракции никеля и циркуляции электролита. Лаборатория экологии работала с шахтными водами и технологиями водоподготовки.",
+      "embedding_text": "experts laboratory hydrometallurgy ecology nickel electrowinning mine water desalination"
+    }
+  ],
+  "entities": [
+    {
+      "id": "ent_process_desalination",
+      "type": "Process",
+      "name": "обессоливание воды",
+      "canonical_name": "water desalination",
+      "language": "ru",
+      "aliases": [
+        "desalination",
+        "водоподготовка"
+      ],
+      "source_chunk_id": "chunk_desalination_001",
+      "page": 12,
+      "confidence": 0.96
+    },
+    {
+      "id": "ent_reverse_osmosis",
+      "type": "TechnologySolution",
+      "name": "обратный осмос",
+      "canonical_name": "reverse osmosis",
+      "language": "ru",
+      "aliases": [
+        "RO"
+      ],
+      "source_chunk_id": "chunk_desalination_001",
+      "page": 12,
+      "confidence": 0.95
+    },
+    {
+      "id": "ent_electrodialysis",
+      "type": "TechnologySolution",
+      "name": "электродиализ",
+      "canonical_name": "electrodialysis",
+      "language": "ru",
+      "aliases": [
+        "ED"
+      ],
+      "source_chunk_id": "chunk_desalination_001",
+      "page": 12,
+      "confidence": 0.92
+    },
+    {
+      "id": "ent_ion_exchange",
+      "type": "TechnologySolution",
+      "name": "ионный обмен",
+      "canonical_name": "ion exchange",
+      "language": "ru",
+      "aliases": [
+        "ion-exchange"
+      ],
+      "source_chunk_id": "chunk_desalination_001",
+      "page": 12,
+      "confidence": 0.91
+    },
+    {
+      "id": "ent_sulfates",
+      "type": "Material",
+      "name": "сульфаты",
+      "canonical_name": "sulfates",
+      "language": "ru",
+      "aliases": [
+        "SO4",
+        "sulfate"
+      ],
+      "source_chunk_id": "chunk_desalination_001",
+      "page": 12,
+      "confidence": 0.98
+    },
+    {
+      "id": "ent_chlorides",
+      "type": "Material",
+      "name": "хлориды",
+      "canonical_name": "chlorides",
+      "language": "ru",
+      "aliases": [
+        "Cl",
+        "chloride"
+      ],
+      "source_chunk_id": "chunk_desalination_001",
+      "page": 12,
+      "confidence": 0.98
+    },
+    {
+      "id": "ent_calcium",
+      "type": "Material",
+      "name": "Ca",
+      "canonical_name": "calcium",
+      "language": "ru",
+      "aliases": [
+        "кальций",
+        "Ca2+"
+      ],
+      "source_chunk_id": "chunk_desalination_001",
+      "page": 12,
+      "confidence": 0.96
+    },
+    {
+      "id": "ent_magnesium",
+      "type": "Material",
+      "name": "Mg",
+      "canonical_name": "magnesium",
+      "language": "ru",
+      "aliases": [
+        "магний",
+        "Mg2+"
+      ],
+      "source_chunk_id": "chunk_desalination_001",
+      "page": 12,
+      "confidence": 0.96
+    },
+    {
+      "id": "ent_sodium",
+      "type": "Material",
+      "name": "Na",
+      "canonical_name": "sodium",
+      "language": "ru",
+      "aliases": [
+        "натрий",
+        "Na+"
+      ],
+      "source_chunk_id": "chunk_desalination_001",
+      "page": 12,
+      "confidence": 0.96
+    },
+    {
+      "id": "ent_process_nickel_ew",
+      "type": "Process",
+      "name": "электроэкстракция никеля",
+      "canonical_name": "nickel electrowinning",
+      "language": "ru",
+      "aliases": [
+        "electrowinning",
+        "электролитическое извлечение никеля"
+      ],
+      "source_chunk_id": "chunk_catholyte_001",
+      "page": 8,
+      "confidence": 0.97
+    },
+    {
+      "id": "ent_catholyte",
+      "type": "Material",
+      "name": "католит",
+      "canonical_name": "catholyte",
+      "language": "ru",
+      "aliases": [
+        "catholyte",
+        "катодный электролит"
+      ],
+      "source_chunk_id": "chunk_catholyte_001",
+      "page": 8,
+      "confidence": 0.97
+    },
+    {
+      "id": "ent_ew_cell",
+      "type": "Equipment",
+      "name": "ванна электроэкстракции",
+      "canonical_name": "electrowinning cell",
+      "language": "ru",
+      "aliases": [
+        "electrowinning bath"
+      ],
+      "source_chunk_id": "chunk_catholyte_001",
+      "page": 8,
+      "confidence": 0.9
+    },
+    {
+      "id": "ent_longitudinal_circulation",
+      "type": "TechnologySolution",
+      "name": "продольная циркуляция",
+      "canonical_name": "longitudinal catholyte circulation",
+      "language": "ru",
+      "aliases": [],
+      "source_chunk_id": "chunk_catholyte_001",
+      "page": 8,
+      "confidence": 0.88
+    },
+    {
+      "id": "ent_transverse_circulation",
+      "type": "TechnologySolution",
+      "name": "поперечная циркуляция",
+      "canonical_name": "transverse catholyte circulation",
+      "language": "ru",
+      "aliases": [],
+      "source_chunk_id": "chunk_catholyte_001",
+      "page": 8,
+      "confidence": 0.87
+    },
+    {
+      "id": "ent_distributor_circulation",
+      "type": "TechnologySolution",
+      "name": "распределительная схема циркуляции",
+      "canonical_name": "distributed catholyte circulation",
+      "language": "ru",
+      "aliases": [],
+      "source_chunk_id": "chunk_catholyte_001",
+      "page": 8,
+      "confidence": 0.86
+    },
+    {
+      "id": "ent_process_matte_slag",
+      "type": "Process",
+      "name": "распределение между штейном и шлаком",
+      "canonical_name": "matte slag distribution",
+      "language": "ru",
+      "aliases": [
+        "matte-slag partitioning"
+      ],
+      "source_chunk_id": "chunk_matte_slag_001",
+      "page": 21,
+      "confidence": 0.95
+    },
+    {
+      "id": "ent_gold",
+      "type": "Material",
+      "name": "Au",
+      "canonical_name": "gold",
+      "language": "ru",
+      "aliases": [
+        "золото"
+      ],
+      "source_chunk_id": "chunk_matte_slag_001",
+      "page": 21,
+      "confidence": 0.98
+    },
+    {
+      "id": "ent_silver",
+      "type": "Material",
+      "name": "Ag",
+      "canonical_name": "silver",
+      "language": "ru",
+      "aliases": [
+        "серебро"
+      ],
+      "source_chunk_id": "chunk_matte_slag_001",
+      "page": 21,
+      "confidence": 0.98
+    },
+    {
+      "id": "ent_pgm",
+      "type": "Material",
+      "name": "МПГ",
+      "canonical_name": "platinum group metals",
+      "language": "ru",
+      "aliases": [
+        "PGM",
+        "platinum group metals"
+      ],
+      "source_chunk_id": "chunk_matte_slag_001",
+      "page": 21,
+      "confidence": 0.96
+    },
+    {
+      "id": "ent_copper_matte",
+      "type": "Material",
+      "name": "медный штейн",
+      "canonical_name": "copper matte",
+      "language": "ru",
+      "aliases": [],
+      "source_chunk_id": "chunk_matte_slag_001",
+      "page": 21,
+      "confidence": 0.93
+    },
+    {
+      "id": "ent_nickel_matte",
+      "type": "Material",
+      "name": "никелевый штейн",
+      "canonical_name": "nickel matte",
+      "language": "ru",
+      "aliases": [],
+      "source_chunk_id": "chunk_matte_slag_001",
+      "page": 21,
+      "confidence": 0.93
+    },
+    {
+      "id": "ent_slag",
+      "type": "Material",
+      "name": "шлак",
+      "canonical_name": "slag",
+      "language": "ru",
+      "aliases": [
+        "slag phase"
+      ],
+      "source_chunk_id": "chunk_matte_slag_001",
+      "page": 21,
+      "confidence": 0.92
+    },
+    {
+      "id": "ent_process_mine_water_injection",
+      "type": "Process",
+      "name": "закачка шахтных вод в глубокие горизонты",
+      "canonical_name": "mine water deep injection",
+      "language": "ru",
+      "aliases": [
+        "deep well injection",
+        "закачка в глубокие горизонты"
+      ],
+      "source_chunk_id": "chunk_mine_water_001",
+      "page": 33,
+      "confidence": 0.95
+    },
+    {
+      "id": "ent_mine_water",
+      "type": "Material",
+      "name": "шахтные воды",
+      "canonical_name": "mine water",
+      "language": "ru",
+      "aliases": [
+        "mine wastewater"
+      ],
+      "source_chunk_id": "chunk_mine_water_001",
+      "page": 33,
+      "confidence": 0.94
+    },
+    {
+      "id": "ent_russia",
+      "type": "Geography",
+      "name": "Россия",
+      "canonical_name": "Russia",
+      "language": "ru",
+      "aliases": [
+        "RU"
+      ],
+      "source_chunk_id": "chunk_mine_water_001",
+      "page": 33,
+      "confidence": 0.99
+    },
+    {
+      "id": "ent_foreign",
+      "type": "Geography",
+      "name": "зарубежная практика",
+      "canonical_name": "foreign practice",
+      "language": "ru",
+      "aliases": [
+        "world practice"
+      ],
+      "source_chunk_id": "chunk_mine_water_001",
+      "page": 33,
+      "confidence": 0.89
+    },
+    {
+      "id": "ent_lab_hydro",
+      "type": "Laboratory",
+      "name": "Лаборатория гидрометаллургии",
+      "canonical_name": "hydrometallurgy laboratory",
+      "language": "ru",
+      "aliases": [],
+      "source_chunk_id": "chunk_experts_001",
+      "page": 45,
+      "confidence": 0.96
+    },
+    {
+      "id": "ent_lab_ecology",
+      "type": "Laboratory",
+      "name": "Лаборатория экологии",
+      "canonical_name": "ecology laboratory",
+      "language": "ru",
+      "aliases": [],
+      "source_chunk_id": "chunk_experts_001",
+      "page": 45,
+      "confidence": 0.95
+    },
+    {
+      "id": "ent_expert_ivanov",
+      "type": "Expert",
+      "name": "Иванов И.И.",
+      "canonical_name": "Ivanov I.I.",
+      "language": "ru",
+      "aliases": [],
+      "source_chunk_id": "chunk_experts_001",
+      "page": 45,
+      "confidence": 0.82
+    }
+  ],
+  "numeric_values": [
+    {
+      "id": "num_sulfates_200_300",
+      "parameter": "sulfate_concentration",
+      "display_name": "концентрация сульфатов",
+      "value": null,
+      "value_min": 200,
+      "value_max": 300,
+      "comparator": "range",
+      "unit_original": "мг/л",
+      "unit_normalized": "mg/L",
+      "context": "исходная вода",
+      "source_text": "сульфатов 200-300 мг/л",
+      "source_chunk_id": "chunk_desalination_001",
+      "page": 12,
+      "confidence": 0.96
+    },
+    {
+      "id": "num_chlorides_200_300",
+      "parameter": "chloride_concentration",
+      "display_name": "концентрация хлоридов",
+      "value": null,
+      "value_min": 200,
+      "value_max": 300,
+      "comparator": "range",
+      "unit_original": "мг/л",
+      "unit_normalized": "mg/L",
+      "context": "исходная вода",
+      "source_text": "хлоридов 200-300 мг/л",
+      "source_chunk_id": "chunk_desalination_001",
+      "page": 12,
+      "confidence": 0.96
+    },
+    {
+      "id": "num_dry_residue_max_1000",
+      "parameter": "dry_residue",
+      "display_name": "сухой остаток",
+      "value": null,
+      "value_min": null,
+      "value_max": 1000,
+      "comparator": "<=",
+      "unit_original": "мг/дм3",
+      "unit_normalized": "mg/L",
+      "context": "требование к очищенной воде",
+      "source_text": "сухому остатку не более 1000 мг/дм3",
+      "source_chunk_id": "chunk_desalination_001",
+      "page": 12,
+      "confidence": 0.97
+    },
+    {
+      "id": "num_catholyte_velocity_02_05",
+      "parameter": "catholyte_flow_velocity",
+      "display_name": "скорость потока католита",
+      "value": null,
+      "value_min": 0.2,
+      "value_max": 0.5,
+      "comparator": "range",
+      "unit_original": "м/с",
+      "unit_normalized": "m/s",
+      "context": "промышленные ванны электроэкстракции никеля",
+      "source_text": "скорость потока католита 0.2-0.5 м/с",
+      "source_chunk_id": "chunk_catholyte_001",
+      "page": 8,
+      "confidence": 0.95
+    },
+    {
+      "id": "num_temperature_1250_1350",
+      "parameter": "temperature",
+      "display_name": "температура",
+      "value": null,
+      "value_min": 1250,
+      "value_max": 1350,
+      "comparator": "range",
+      "unit_original": "°C",
+      "unit_normalized": "degC",
+      "context": "распределение Au, Ag и МПГ между штейном и шлаком",
+      "source_text": "температуры 1250-1350 °C",
+      "source_chunk_id": "chunk_matte_slag_001",
+      "page": 21,
+      "confidence": 0.94
+    },
+    {
+      "id": "num_injection_productivity_100_500",
+      "parameter": "productivity",
+      "display_name": "производительность",
+      "value": null,
+      "value_min": 100,
+      "value_max": 500,
+      "comparator": "range",
+      "unit_original": "м3/ч",
+      "unit_normalized": "m3/h",
+      "context": "пилотные проекты закачки шахтных вод",
+      "source_text": "производительность 100-500 м3/ч",
+      "source_chunk_id": "chunk_mine_water_001",
+      "page": 33,
+      "confidence": 0.92
+    },
+    {
+      "id": "num_capex_120_350",
+      "parameter": "capex",
+      "display_name": "CAPEX",
+      "value": null,
+      "value_min": 120,
+      "value_max": 350,
+      "comparator": "range",
+      "unit_original": "млн руб.",
+      "unit_normalized": "million_RUB",
+      "context": "пилотные проекты закачки шахтных вод",
+      "source_text": "CAPEX 120-350 млн руб.",
+      "source_chunk_id": "chunk_mine_water_001",
+      "page": 33,
+      "confidence": 0.91
+    },
+    {
+      "id": "num_opex_25_80",
+      "parameter": "opex",
+      "display_name": "OPEX",
+      "value": null,
+      "value_min": 25,
+      "value_max": 80,
+      "comparator": "range",
+      "unit_original": "руб./м3",
+      "unit_normalized": "RUB/m3",
+      "context": "пилотные проекты закачки шахтных вод",
+      "source_text": "OPEX 25-80 руб./м3",
+      "source_chunk_id": "chunk_mine_water_001",
+      "page": 33,
+      "confidence": 0.91
+    },
+    {
+      "id": "num_injection_environmental_risk_2",
+      "parameter": "environmental_risk_score",
+      "display_name": "экологический риск",
+      "value": 2,
+      "comparator": "=",
+      "unit_original": "балл 1-5",
+      "unit_normalized": "score_1_5",
+      "context": "пилотные проекты закачки шахтных вод при наличии мониторинга горизонтов",
+      "source_text": "экологический риск оценивается как умеренный при наличии мониторинга",
+      "page": 33,
+      "confidence": 0.78
+    },
+    {
+      "id": "num_injection_trl_6_7",
+      "parameter": "trl",
+      "display_name": "уровень готовности технологии",
+      "value_min": 6,
+      "value_max": 7,
+      "comparator": "range",
+      "unit_original": "TRL",
+      "unit_normalized": "TRL",
+      "context": "закачка шахтных вод в глубокие горизонты",
+      "source_text": "уровень готовности TRL 6-7 для пилотных проектов",
+      "page": 33,
+      "confidence": 0.8
+    }
+  ],
+  "facts": [
+    {
+      "id": "fact_desalination_ro",
+      "claim_text": "Обратный осмос применим для воды обогатительной фабрики с сульфатами и хлоридами 200-300 мг/л при требовании сухого остатка ≤1000 мг/дм3, но требует предварительной фильтрации.",
+      "fact_type": "technology_applicability",
+      "subject_entity_id": "ent_process_desalination",
+      "object_entity_ids": [
+        "ent_reverse_osmosis",
+        "ent_sulfates",
+        "ent_chlorides",
+        "ent_calcium",
+        "ent_magnesium",
+        "ent_sodium"
+      ],
+      "numeric_value_ids": [
+        "num_sulfates_200_300",
+        "num_chlorides_200_300",
+        "num_dry_residue_max_1000"
+      ],
+      "source": {
+        "document_id": "doc_mock_001",
+        "chunk_id": "chunk_desalination_001",
+        "page": 12,
+        "quote": "применимы обратный осмос, электродиализ и ионный обмен"
+      },
+      "geo_scope": "domestic",
+      "country": "RU",
+      "year": 2024,
+      "confidence": 0.86,
+      "verification_level": "source_supported",
+      "status": "auto_extracted",
+      "updated_at": "2026-07-03"
+    },
+    {
+      "id": "fact_desalination_ed_ix",
+      "claim_text": "Электродиализ и ионный обмен указаны как альтернативные методы обессоливания для воды с ионами Ca, Mg, Na 200-300 мг/л.",
+      "fact_type": "technology_applicability",
+      "subject_entity_id": "ent_process_desalination",
+      "object_entity_ids": [
+        "ent_electrodialysis",
+        "ent_ion_exchange",
+        "ent_calcium",
+        "ent_magnesium",
+        "ent_sodium"
+      ],
+      "numeric_value_ids": [
+        "num_sulfates_200_300",
+        "num_chlorides_200_300",
+        "num_dry_residue_max_1000"
+      ],
+      "source": {
+        "document_id": "doc_mock_001",
+        "chunk_id": "chunk_desalination_001",
+        "page": 12,
+        "quote": "применимы обратный осмос, электродиализ и ионный обмен"
+      },
+      "geo_scope": "domestic",
+      "country": "RU",
+      "year": 2024,
+      "confidence": 0.8,
+      "verification_level": "source_supported",
+      "status": "auto_extracted",
+      "updated_at": "2026-07-03"
+    },
+    {
+      "id": "fact_catholyte_solutions",
+      "claim_text": "В мировой практике электроэкстракции никеля описаны продольная, поперечная и распределительная схемы циркуляции католита.",
+      "fact_type": "technology_solution_list",
+      "subject_entity_id": "ent_process_nickel_ew",
+      "object_entity_ids": [
+        "ent_catholyte",
+        "ent_ew_cell",
+        "ent_longitudinal_circulation",
+        "ent_transverse_circulation",
+        "ent_distributor_circulation"
+      ],
+      "numeric_value_ids": [],
+      "source": {
+        "document_id": "doc_mock_001",
+        "chunk_id": "chunk_catholyte_001",
+        "page": 8,
+        "quote": "описаны продольная, поперечная и распределительная схема циркуляции католита"
+      },
+      "geo_scope": "foreign",
+      "country": "WORLD",
+      "year": 2024,
+      "confidence": 0.84,
+      "verification_level": "source_supported",
+      "status": "auto_extracted",
+      "updated_at": "2026-07-03"
+    },
+    {
+      "id": "fact_catholyte_velocity",
+      "claim_text": "Для промышленных ванн электроэкстракции никеля рабочий диапазон скорости потока католита составляет 0.2-0.5 м/с.",
+      "fact_type": "process_condition",
+      "subject_entity_id": "ent_process_nickel_ew",
+      "object_entity_ids": [
+        "ent_catholyte",
+        "ent_ew_cell"
+      ],
+      "numeric_value_ids": [
+        "num_catholyte_velocity_02_05"
+      ],
+      "source": {
+        "document_id": "doc_mock_001",
+        "chunk_id": "chunk_catholyte_001",
+        "page": 8,
+        "quote": "скорость потока католита 0.2-0.5 м/с указана как рабочий диапазон"
+      },
+      "geo_scope": "foreign",
+      "country": "WORLD",
+      "year": 2024,
+      "confidence": 0.88,
+      "verification_level": "source_supported",
+      "status": "auto_extracted",
+      "updated_at": "2026-07-03"
+    },
+    {
+      "id": "fact_matte_slag_experiments",
+      "claim_text": "Эксперименты 2021-2025 годов изучали распределение Au, Ag и МПГ между медным/никелевым штейном и шлаком при 1250-1350 °C.",
+      "fact_type": "experiment_result",
+      "subject_entity_id": "ent_process_matte_slag",
+      "object_entity_ids": [
+        "ent_gold",
+        "ent_silver",
+        "ent_pgm",
+        "ent_copper_matte",
+        "ent_nickel_matte",
+        "ent_slag"
+      ],
+      "numeric_value_ids": [
+        "num_temperature_1250_1350"
+      ],
+      "source": {
+        "document_id": "doc_mock_001",
+        "chunk_id": "chunk_matte_slag_001",
+        "page": 21,
+        "quote": "Эксперименты 2021-2025 годов по распределению Au, Ag и МПГ"
+      },
+      "geo_scope": "all",
+      "country": "WORLD",
+      "year": 2025,
+      "confidence": 0.82,
+      "verification_level": "source_supported",
+      "status": "auto_extracted",
+      "updated_at": "2026-07-03"
+    },
+    {
+      "id": "fact_mine_water_injection",
+      "claim_text": "Закачка шахтных вод в глубокие горизонты применялась в России и за рубежом; для пилотных проектов указаны производительность 100-500 м3/ч, CAPEX 120-350 млн руб. и OPEX 25-80 руб./м3.",
+      "fact_type": "technology_economic_indicator",
+      "subject_entity_id": "ent_process_mine_water_injection",
+      "object_entity_ids": [
+        "ent_mine_water",
+        "ent_russia",
+        "ent_foreign"
+      ],
+      "numeric_value_ids": [
+        "num_injection_productivity_100_500",
+        "num_capex_120_350",
+        "num_opex_25_80",
+        "num_injection_environmental_risk_2",
+        "num_injection_trl_6_7"
+      ],
+      "source": {
+        "document_id": "doc_mock_001",
+        "chunk_id": "chunk_mine_water_001",
+        "page": 33,
+        "quote": "производительность 100-500 м3/ч, CAPEX 120-350 млн руб., OPEX 25-80 руб./м3"
+      },
+      "geo_scope": "all",
+      "country": "WORLD",
+      "year": 2024,
+      "confidence": 0.79,
+      "verification_level": "source_supported",
+      "status": "auto_extracted",
+      "updated_at": "2026-07-03"
+    },
+    {
+      "id": "fact_lab_hydro_expertise",
+      "claim_text": "Лаборатория гидрометаллургии обладает экспертизой по электроэкстракции никеля и циркуляции электролита.",
+      "fact_type": "expertise_mapping",
+      "subject_entity_id": "ent_lab_hydro",
+      "object_entity_ids": [
+        "ent_process_nickel_ew",
+        "ent_catholyte",
+        "ent_expert_ivanov"
+      ],
+      "numeric_value_ids": [],
+      "source": {
+        "document_id": "doc_mock_001",
+        "chunk_id": "chunk_experts_001",
+        "page": 45,
+        "quote": "Лаборатория гидрометаллургии обладает экспертизой по электроэкстракции никеля"
+      },
+      "geo_scope": "domestic",
+      "country": "RU",
+      "year": 2024,
+      "confidence": 0.81,
+      "verification_level": "source_supported",
+      "status": "auto_extracted",
+      "updated_at": "2026-07-03"
+    }
+  ],
+  "relations": [
+    {
+      "id": "rel_ro_applies_desalination",
+      "type": "APPLIES_TO",
+      "source_entity_id": "ent_reverse_osmosis",
+      "target_entity_id": "ent_process_desalination",
+      "source_chunk_id": "chunk_desalination_001",
+      "evidence_text": "применимы обратный осмос, электродиализ и ионный обмен",
+      "confidence": 0.91
+    },
+    {
+      "id": "rel_ed_applies_desalination",
+      "type": "APPLIES_TO",
+      "source_entity_id": "ent_electrodialysis",
+      "target_entity_id": "ent_process_desalination",
+      "source_chunk_id": "chunk_desalination_001",
+      "evidence_text": "применимы обратный осмос, электродиализ и ионный обмен",
+      "confidence": 0.88
+    },
+    {
+      "id": "rel_ix_applies_desalination",
+      "type": "APPLIES_TO",
+      "source_entity_id": "ent_ion_exchange",
+      "target_entity_id": "ent_process_desalination",
+      "source_chunk_id": "chunk_desalination_001",
+      "evidence_text": "применимы обратный осмос, электродиализ и ионный обмен",
+      "confidence": 0.88
+    },
+    {
+      "id": "rel_ew_uses_catholyte",
+      "type": "USES_MATERIAL",
+      "source_entity_id": "ent_process_nickel_ew",
+      "target_entity_id": "ent_catholyte",
+      "source_chunk_id": "chunk_catholyte_001",
+      "evidence_text": "циркуляции католита",
+      "confidence": 0.93
+    },
+    {
+      "id": "rel_ew_uses_cell",
+      "type": "USES_EQUIPMENT",
+      "source_entity_id": "ent_process_nickel_ew",
+      "target_entity_id": "ent_ew_cell",
+      "source_chunk_id": "chunk_catholyte_001",
+      "evidence_text": "промышленных ванн",
+      "confidence": 0.86
+    },
+    {
+      "id": "rel_lab_hydro_expert_ew",
+      "type": "EXPERT_IN",
+      "source_entity_id": "ent_lab_hydro",
+      "target_entity_id": "ent_process_nickel_ew",
+      "source_chunk_id": "chunk_experts_001",
+      "evidence_text": "экспертизой по электроэкстракции никеля",
+      "confidence": 0.89
+    },
+    {
+      "id": "rel_lab_ecology_expert_water",
+      "type": "EXPERT_IN",
+      "source_entity_id": "ent_lab_ecology",
+      "target_entity_id": "ent_process_desalination",
+      "source_chunk_id": "chunk_experts_001",
+      "evidence_text": "шахтными водами и технологиями водоподготовки",
+      "confidence": 0.82
+    }
+  ],
+  "warnings": [
+    "This is a mock extracted document for backend/frontend integration before ML service is ready."
+  ]
+}

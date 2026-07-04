@@ -1,0 +1,14 @@
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+python-multipart==0.0.20
+pydantic==2.10.4
+pydantic-settings==2.7.1
+neo4j==5.27.0
+psycopg[binary]==3.2.3
+httpx==0.28.1
+orjson==3.10.12
+python-slugify==8.0.4
+reportlab==4.2.5
+pypdf==5.1.0
+python-docx==1.1.2
+openpyxl==3.1.5

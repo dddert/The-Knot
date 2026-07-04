@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FinalAnswer",
+  "type": "object",
+  "required": [
+    "summary",
+    "confidence",
+    "source_count",
+    "sections"
+  ],
+  "properties": {
+    "summary": {
+      "type": "string"
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "source_count": {
+      "type": "integer"
+    },
+    "sections": {
+      "type": "array"
+    },
+    "recommendations": {
+      "type": "array"
+    },
+    "related_experts": {
+      "type": "array"
+    },
+    "export_payload": {
+      "type": "object",
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,13 @@
+
+# Local secrets
+.env
+**/.env
+
+# Large generated ML corpus/index data
+ml-data/input/
+ml-data/retrieval-index/
+
+# Keep placeholder
+!ml-data/.gitkeep
+.idea/
+.idea
