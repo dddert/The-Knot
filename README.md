@@ -4,6 +4,26 @@
 
 > Проект создан для анализа R&D-корпусов в горно-металлургической и смежных отраслях, но архитектура не привязана к одному домену и масштабируется на новые предметные области.
 
+**ДЛЯ ТЕСТИРОВАНИЯ ПЕРЕЙДИТЕ ПО ССЫЛКЕ - https://affection-appraiser-swab.ngrok-free.dev/ - ОБЯЗАТЕЛЬНО ВКЛЮЧИТЕ VPN**
+---
+## Содержание
+
+- [Возможности](#возможности)
+- [Демо-стенд](#демо-стенд)
+- [Архитектура](#архитектура)
+- [Стек](#стек)
+- [Быстрый старт](#быстрый-старт)
+- [URL сервисов](#url-сервисов)
+- [Работа с пользовательскими PDF](#работа-с-пользовательскими-pdf)
+- [Примеры запросов](#примеры-запросов)
+- [Search filters](#search-filters)
+- [Compare](#compare)
+- [Role-based access](#role-based-access)
+- [Основные API endpoints](#основные-api-endpoints)
+- [Структура проекта](#структура-проекта)
+- [Проверка состояния](#проверка-состояния)
+- [Regression smoke tests](#regression-smoke-tests)
+- [Команда](#команда)
 ---
 
 ## Возможности
@@ -196,8 +216,10 @@ docker run --rm --gpus all \
 ### 1. Клонировать репозиторий
 
 ```bash
-git clone <REPOSITORY_URL>
-cd Nornickel-Science-tangle-RAG
+git clone https://github.com/dddert/The-Knot.git
+cd The-Knot
+git lfs install
+git lfs pull
 ```
 
 ---
