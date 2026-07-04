@@ -2,14 +2,13 @@ import type { AppContext } from '../lib/context';
 import { GRAPH_MODES, ROLES, saveContext } from '../lib/context';
 import type { Role } from '../lib/types';
 
-export type PageKey = 'home' | 'import' | 'search' | 'graph' | 'compare' | 'facts' | 'dashboard' | 'export' | 'audit';
+export type PageKey = 'home' | 'import' | 'search' | 'graph' | 'facts' | 'dashboard' | 'export' | 'audit';
 
 const NAV: Array<{ key: PageKey; label: string; caption: string; roles?: Role[] }> = [
   { key: 'home', label: 'Overview', caption: 'старт и статус' },
-  { key: 'import', label: 'Import', caption: 'документы и mock', roles: ['researcher', 'analyst', 'manager', 'admin'] },
+  { key: 'import', label: 'Import', caption: 'документы', roles: ['researcher', 'analyst', 'manager', 'admin'] },
   { key: 'search', label: 'Search', caption: 'QueryPlan retrieval' },
   { key: 'graph', label: 'Graph', caption: 'fact-centric view', roles: ['researcher', 'analyst', 'manager', 'admin'] },
-  { key: 'compare', label: 'Compare', caption: 'практики и экономика' },
   { key: 'facts', label: 'Fact Editor', caption: 'версии и верификация' },
   { key: 'dashboard', label: 'Dashboard', caption: 'покрытие знаний', roles: ['researcher', 'analyst', 'manager', 'admin'] },
   { key: 'export', label: 'Export', caption: 'PDF / MD / JSON-LD', roles: ['analyst', 'manager', 'admin'] },

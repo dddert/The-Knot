@@ -242,3 +242,43 @@ th, td { max-width: 280px; overflow-wrap: anywhere; word-break: break-word; }
   .graph-svg { min-width: 680px; }
   .brand strong { font-size: 16px; }
 }
+
+
+/* targeted UI cleanup: graph spacing and audit controls */
+.graph-query-card .inline-form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 14px;
+  align-items: end;
+  margin-bottom: 16px;
+}
+.graph-query-card .inline-form input { min-width: 0; }
+.graph-query-card .notice { margin-bottom: 0; }
+
+.audit-controls {
+  display: grid;
+  grid-template-columns: minmax(160px, 220px) minmax(220px, 1fr) auto;
+  gap: 16px;
+  align-items: end;
+}
+.audit-controls > label { min-width: 0; }
+.audit-controls .check {
+  margin: 0 0 11px;
+  align-self: end;
+  white-space: nowrap;
+}
+.audit-controls .btn { align-self: end; }
+
+@media (max-width: 860px) {
+  .graph-query-card .inline-form,
+  .audit-controls {
+    grid-template-columns: 1fr;
+  }
+  .audit-controls .check { margin: 0; white-space: normal; }
+}
+
+
+/* targeted spacing: Search submit action */
+.search-submit {
+  margin-top: 18px;
+}
