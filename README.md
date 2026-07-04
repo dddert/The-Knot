@@ -569,33 +569,6 @@ POST /ml/synthesize-answer
 
 ---
 
-## Retrieval artifacts и Git LFS
-
-Большие файлы индекса должны отслеживаться через Git LFS:
-
-```bash
-git lfs install
-
-git lfs track "ml-data/retrieval-index/*.faiss"
-git lfs track "ml-data/retrieval-index/*.f32"
-git lfs track "ml-data/retrieval-index/*.sqlite3"
-```
-
-Если файлы уже были закоммичены как обычные Git blobs, одного `git lfs track` недостаточно. Необходимо мигрировать историю:
-
-```bash
-git lfs migrate import \
-  --include="ml-data/retrieval-index/dense.faiss,ml-data/retrieval-index/embeddings.f32,ml-data/retrieval-index/lexical.sqlite3"
-```
-
-После переписывания истории push обычно требует:
-
-```bash
-git push --force-with-lease
-```
-
----
-
 ## Проверка состояния
 
 ### Backend
@@ -674,45 +647,6 @@ evidence > 0
 facts > 0
 experts > 0
 graph nodes > 0
-```
-
----
-
-## Ограничения
-
-- Качество graph enrichment зависит от coverage selective extraction.
-- Metadata по годам, географии и типам фактов может быть разреженной.
-- Сканированные PDF без текстового слоя требуют OCR.
-- LLM latency зависит от внешнего провайдера.
-- Первый запуск с пустым Hugging Face cache может занять время на скачивание весов.
-- Numeric retrieval является authoritative для числовых constraints до полного покрытия `ParameterValue` в Neo4j.
-
----
-
-## Безопасность
-
-Рекомендуется:
-
-- не публиковать `.env`;
-- не коммитить API keys;
-- не открывать наружу Neo4j, PostgreSQL и ML Service;
-- публиковать только Frontend через reverse proxy / tunnel;
-- использовать role-based access;
-- отдельно управлять confidential documents;
-- хранить audit logs.
-
----
-
-## Лицензия
-
-Укажите лицензию проекта перед публичной публикацией репозитория.
-
-Например:
-
-```text
-MIT
-Apache-2.0
-Proprietary / Hackathon Demo
 ```
 
 ---
