@@ -196,8 +196,10 @@ docker run --rm --gpus all \
 ### 1. Клонировать репозиторий
 
 ```bash
-git clone <REPOSITORY_URL>
-cd Nornickel-Science-tangle-RAG
+git clone [dddert/The-Knot](https://github.com/dddert/The-Knot.git)
+cd The-Knot
+git lfs install
+git lfs pull
 ```
 
 ---
