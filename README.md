@@ -3,7 +3,25 @@
 **Научный клубок** — Hybrid GraphRAG-платформа для поиска, анализа и навигации по научно-техническим знаниям в больших разнородных корпусах документов. Система объединяет полнотекстовый и векторный поиск, числовые ограничения, граф знаний, provenance до страницы/фрагмента и grounded LLM-синтез.
 
 > Проект создан для анализа R&D-корпусов в горно-металлургической и смежных отраслях, но архитектура не привязана к одному домену и масштабируется на новые предметные области.
+---
+## Содержание
 
+- [Возможности](#возможности)
+- [Демо-стенд](#демо-стенд)
+- [Архитектура](#архитектура)
+- [Стек](#стек)
+- [Быстрый старт](#быстрый-старт)
+- [URL сервисов](#url-сервисов)
+- [Работа с пользовательскими PDF](#работа-с-пользовательскими-pdf)
+- [Примеры запросов](#примеры-запросов)
+- [Search filters](#search-filters)
+- [Compare](#compare)
+- [Role-based access](#role-based-access)
+- [Основные API endpoints](#основные-api-endpoints)
+- [Структура проекта](#структура-проекта)
+- [Проверка состояния](#проверка-состояния)
+- [Regression smoke tests](#regression-smoke-tests)
+- [Команда](#команда)
 ---
 
 ## Возможности
@@ -196,8 +214,10 @@ docker run --rm --gpus all \
 ### 1. Клонировать репозиторий
 
 ```bash
-git clone <REPOSITORY_URL>
-cd Nornickel-Science-tangle-RAG
+git clone https://github.com/dddert/The-Knot.git
+cd The-Knot
+git lfs install
+git lfs pull
 ```
 
 ---
@@ -569,33 +589,6 @@ POST /ml/synthesize-answer
 
 ---
 
-## Retrieval artifacts и Git LFS
-
-Большие файлы индекса должны отслеживаться через Git LFS:
-
-```bash
-git lfs install
-
-git lfs track "ml-data/retrieval-index/*.faiss"
-git lfs track "ml-data/retrieval-index/*.f32"
-git lfs track "ml-data/retrieval-index/*.sqlite3"
-```
-
-Если файлы уже были закоммичены как обычные Git blobs, одного `git lfs track` недостаточно. Необходимо мигрировать историю:
-
-```bash
-git lfs migrate import \
-  --include="ml-data/retrieval-index/dense.faiss,ml-data/retrieval-index/embeddings.f32,ml-data/retrieval-index/lexical.sqlite3"
-```
-
-После переписывания истории push обычно требует:
-
-```bash
-git push --force-with-lease
-```
-
----
-
 ## Проверка состояния
 
 ### Backend
@@ -678,45 +671,6 @@ graph nodes > 0
 
 ---
 
-## Ограничения
-
-- Качество graph enrichment зависит от coverage selective extraction.
-- Metadata по годам, географии и типам фактов может быть разреженной.
-- Сканированные PDF без текстового слоя требуют OCR.
-- LLM latency зависит от внешнего провайдера.
-- Первый запуск с пустым Hugging Face cache может занять время на скачивание весов.
-- Numeric retrieval является authoritative для числовых constraints до полного покрытия `ParameterValue` в Neo4j.
-
----
-
-## Безопасность
-
-Рекомендуется:
-
-- не публиковать `.env`;
-- не коммитить API keys;
-- не открывать наружу Neo4j, PostgreSQL и ML Service;
-- публиковать только Frontend через reverse proxy / tunnel;
-- использовать role-based access;
-- отдельно управлять confidential documents;
-- хранить audit logs.
-
----
-
-## Лицензия
-
-Укажите лицензию проекта перед публичной публикацией репозитория.
-
-Например:
-
-```text
-MIT
-Apache-2.0
-Proprietary / Hackathon Demo
-```
-
----
-
 ## Команда
 
-Проект разработан как демонстрационная R&D-платформа для построения проверяемой карты знаний из больших научно-технических корпусов.
+The Sigmoid Tangents - Андрей Волков, Артём Грызунов
